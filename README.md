@@ -3,7 +3,7 @@
 __MIDTERM EXAMS (M0, M1, M2, M3)__
 
 **M0:**  Prepare for M1  
-Practice exercise X5 - bouncing balls on pool table.
+Practice exercise X5 (and Project 2) - bouncing balls on pool table.
 
 **M1:**  In-class 10/21  
 Starting from scratch; with new specifications, restrictions, and coding requirements.  
