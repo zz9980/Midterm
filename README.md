@@ -2,7 +2,7 @@
 
 __MIDTERM EXAMS (M0, M1, M2, M3)__
 
-M0=  Prepare for M1  
+_M0=  Prepare for M1_  
 Practice exercise X5 - bouncing balls on table.
 
 M1=  In-class 10/21  
