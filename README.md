@@ -7,7 +7,7 @@ Practice exercise X5 (and Project 2) - bouncing balls on pool table.
 
 **M1:**  In-class 10/21  
 Starting from scratch; with new specifications, restrictions, and coding requirements.  
-May view previous code, but do not copy any of it.
+Open book; you may view previous code, but do not **copy** any of it.
 
 **M2:**  Take-home (due in one week.)  
 Additional requirements.
