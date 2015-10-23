@@ -34,7 +34,7 @@ float left=50, right=450, top=100, bottom=250;        // Table boundaries
 float middle=250;
 boolean wall=true;
 
-int tableRed=150, tableGreen=250, tableBlue=150;      // green pool table
+int tableRed=0, tableGreen=255, tableBlue=65;      // green pool table
 int score=0,m=0,k=0;
 
     // ADD YOUR OWN DECLARATIONS HERE. ++++
@@ -93,7 +93,7 @@ void keyPressed() {
 void table( float east, float north, float west, float south ) {
   fill( tableRed, tableGreen, tableBlue );    // pool table
   strokeWeight(20);
-  stroke( 127, 0, 0 );      // Brown walls
+  stroke( 240, 150, 50 );   
   rect( east-20, north-20, west+20, south+20 );
 
             //++++ MODIFY THIS CODE, as necessary. ++++
@@ -177,16 +177,37 @@ void show() {
  
 }
 void buttons() {
-    //++++ ADD YOUR OWN CODE HERE. ++++
+  rectMode(CORNER);
+  fill(120,0,0,5);
+  rect(25,40, 60,25);
+  fill(0);
+  text( "RESET" , 35, 60);
+ 
+  fill(120,0,0,5);
+  rect(120,40, 100,25);
+  fill(0);
+  text( "WALL REMOVE" , 130, 60);
+  
+  fill(120,0,0,5);
+  rect(250,40, 100,25);
+  fill(0);
+  text( "PINK TABLE" , 260, 60);
+  
+}
+
+void mousePressed() {
+    if ( mouseX>25 && mouseX<85 && mouseY>40 && mouseY<65){
+    reset();
+  }
+
+   if ( mouseX>250 && mouseX<350 && mouseY>40 && mouseY<65){
+   tableRed=247; tableGreen=90; tableBlue=130; 
+  }
 
 
 
 
-
-
-
-
-
+  
 
 }
 
@@ -223,10 +244,10 @@ void reset() {
   greenDX=  random( 1,3 );   greenDY=  random( 1,3 );
   blueDX=  random( 1,3 );    blueDY=  random( 1,3 );
 
+  tableRed=0; tableGreen=255; tableBlue=65;
+
+  
 }
-
-
-
 
 
 
