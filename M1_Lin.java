@@ -48,7 +48,7 @@ void setup() {
     top=    100;
     bottom= height-50;
     middle= left + (right-left) / 2;
-    
+
     redX=  random( middle+20,right );     redY=  random( top, bottom );
     greenX=  random( middle+20,right );   greenY=  random( top, bottom );
     blueX=  random( middle+20,right );    blueY=  random( top, bottom );
@@ -56,6 +56,7 @@ void setup() {
     redDX=  random( 1,3 );     redDY=  random( 1,3 );
     greenDX=  random( 1,3 );   greenDY=  random( 1,3 );
     blueDX=  random( 1,3 );    blueDY=  random( 1,3 );
+    
  }
 
 
@@ -83,9 +84,14 @@ void keyPressed() {
   }
   
   if (key == 'w') {
-    
+    wall=!wall;
+    middle=left-20;
   }
-    
+  
+  if (key == 'p') {
+     tableRed=247; tableGreen=90; tableBlue=130;
+  } 
+
 }
 
 
@@ -138,7 +144,7 @@ void bounce() {
 
 }  
   
-
+  
 void collisions() {
     float tmp;
     // Swap velocities! , bounce off each other.
@@ -196,29 +202,26 @@ void buttons() {
 }
 
 void mousePressed() {
-    if ( mouseX>25 && mouseX<85 && mouseY>40 && mouseY<65){
+   //reset
+   if ( mouseX>25 && mouseX<85 && mouseY>40 && mouseY<65){
     reset();
   }
 
+   //chage table to pink
    if ( mouseX>250 && mouseX<350 && mouseY>40 && mouseY<65){
    tableRed=247; tableGreen=90; tableBlue=130; 
+  }
+   
+  // remove the wall
+  if ( mouseX>120 && mouseX<220 && mouseY>40 && mouseY<65){
+   wall=!wall;
+   middle=left-20;
   }
 
 
 
 
-  
-
 }
-
-
-
-
-
-
-
-
-
 
 void messages() {
   fill(0);
@@ -246,6 +249,8 @@ void reset() {
 
   tableRed=0; tableGreen=255; tableBlue=65;
 
+  wall=true;
+  middle=320;
   
 }
 
