@@ -29,7 +29,7 @@ int collisions;
 //// OTHER GLOBALS:  strings, pool table, etc ////
 
 String title=  "CST112 MIDTERM EXAM";
-String news=   "Click any ball to reset it to right half of table.  (r resets all.)";
+//String news=   "Click any ball to reset it to right half of table.  (r resets all.)";
 String author= "Teng Lin";
 String help =  "Pressed KEYS 1,2,3 to reset each ball." ; 
 
@@ -298,7 +298,7 @@ void messages() {
   
   fill(0);
   text( title, width/3, 15 );
-  text( news, width/9, 30 );
+  //text( news, width/9, 30 );
   text( author, 10, height-5 );
   text( help, 250, height-5);
   // Also, display the number of collisions.
